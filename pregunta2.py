@@ -5,7 +5,6 @@ from sklearn.cluster import KMeans
 
 data = pd.read_csv("Smogon_agrupados.csv")
 data = data.drop("Tipo", axis=1)
-
 #borrar el indice
 data.drop(data.columns[0], axis=1, inplace=True)
 
@@ -15,7 +14,6 @@ x_pca = pca.transform(data)
 
 print("Número de filas y columnas del DataFrame original:")
 print(data.shape)
-# Imprimir el número de filas y columnas del DataFrame de componentes principales
 print("Número de filas y columnas del DataFrame de componentes principales:")
 print(x_pca.shape)
 cabeceras = ["PCA1", "PCA2", "PCA3", "PCA4", "PCA5", "PCA6", "PCA7", "PCA8", "PCA9", "PCA10"]
